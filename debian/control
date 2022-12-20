@@ -1,0 +1,65 @@
+Source: haskell-hslua-module-text
+Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
+Uploaders: Clint Adams <clint@debian.org>
+Priority: optional
+Section: haskell
+Rules-Requires-Root: no
+Build-Depends: debhelper (>= 10),
+ haskell-devscripts (>= 0.8),
+ cdbs,
+ ghc (>= 8.4.3),
+ ghc-prof,
+ libghc-hslua-dev (>= 1.0.3),
+ libghc-hslua-dev (<< 1.2),
+ libghc-hslua-prof,
+ libghc-hslua-dev,
+ libghc-tasty-dev,
+ libghc-tasty-hunit-dev,
+Build-Depends-Indep: ghc-doc,
+ libghc-hslua-doc,
+Standards-Version: 4.5.0
+Homepage: https://github.com/hslua/hslua-module-text
+Vcs-Browser: https://salsa.debian.org/haskell-team/DHG_packages/tree/master/p/haskell-hslua-module-text
+Vcs-Git: https://salsa.debian.org/haskell-team/DHG_packages.git
+X-Description: Lua module for text
+ UTF-8 aware subset of Lua's "string" module.
+
+Package: libghc-hslua-module-text-dev
+Architecture: any
+Depends: ${haskell:Depends},
+ ${misc:Depends},
+ ${shlibs:Depends},
+Recommends: ${haskell:Recommends},
+Suggests: ${haskell:Suggests},
+Conflicts: ${haskell:Conflicts},
+Provides: ${haskell:Provides},
+Description: ${haskell:ShortDescription}${haskell:ShortBlurb}
+ ${haskell:LongDescription}
+ .
+ ${haskell:Blurb}
+
+Package: libghc-hslua-module-text-prof
+Architecture: any
+Depends: ${haskell:Depends},
+ ${misc:Depends},
+Recommends: ${haskell:Recommends},
+Suggests: ${haskell:Suggests},
+Conflicts: ${haskell:Conflicts},
+Provides: ${haskell:Provides},
+Description: ${haskell:ShortDescription}${haskell:ShortBlurb}
+ ${haskell:LongDescription}
+ .
+ ${haskell:Blurb}
+
+Package: libghc-hslua-module-text-doc
+Architecture: all
+Section: doc
+Depends: ${haskell:Depends},
+ ${misc:Depends},
+Recommends: ${haskell:Recommends},
+Suggests: ${haskell:Suggests},
+Conflicts: ${haskell:Conflicts},
+Description: ${haskell:ShortDescription}${haskell:ShortBlurb}
+ ${haskell:LongDescription}
+ .
+ ${haskell:Blurb}
